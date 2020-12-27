@@ -1,0 +1,40 @@
+/* Estilos de la barra (crédito de este codigo https://codepen.io/crossphd/pen/zKjaxb) */
+
+#topbar {
+    position:fixed;
+    bottom: -60px;
+    display: block;
+    z-index: 99999;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    transition: bottom 1s;
+}
+/* Esconder checkbox (la necesitamos para que la barra aparezca) */
+#toggleTop {
+    display: none;
+}
+/* Botones para mostrar y esconder la barra */
+#showTop {
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    right: 30px;
+    display: block;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+}
+#hideTop {
+    float: right;
+    display: inline-block;
+}
+/* Mostrar la barra cuando la checkbox está marcada (por defecto lo está) */
+#toggleTop:checked + #topbar {
+    transition: bottom 1s;
+    bottom:0px;
+}
